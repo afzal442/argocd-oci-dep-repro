@@ -1,0 +1,4 @@
+# The dependency is fetched by `helm dependency build` regardless of this flag,
+# but is not rendered - so syncing this app deploys only the ConfigMap below.
+nginx:
+  enabled: false

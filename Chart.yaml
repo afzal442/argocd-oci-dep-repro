@@ -1,0 +1,11 @@
+apiVersion: v2
+name: oci-dep-repro
+description: Dummy chart in git with a public OCI dependency, to test whether OCI registry credentials reach manifest generation.
+type: application
+version: 0.1.0
+appVersion: "0.1.0"
+dependencies:
+  - name: nginx
+    version: "25.1.9"
+    repository: oci://registry-1.docker.io/bitnamicharts
+    condition: nginx.enabled
