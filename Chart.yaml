@@ -1,16 +1,10 @@
 apiVersion: v2
 name: oci-dep-repro
-description: Dummy chart in git whose Chart.yaml declares private oci:// dependencies.
+description: Dummy chart in git whose Chart.yaml declares a public oci:// dependency.
 type: application
 version: 0.1.0
 appVersion: "0.1.0"
 dependencies:
-  # private: ghcr.io/afzal442/argocd-oci  -> requires registry credentials
-  - name: argocd-oci
-    version: "0.2.0"
-    repository: oci://ghcr.io/afzal442
-    condition: argocd-oci.enabled
-  # public: needs no credentials, proves the fetch path itself works
   - name: nginx
     version: "25.1.9"
     repository: oci://registry-1.docker.io/bitnamicharts
