@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: oci-dep-repro
 data:
-  note: "dummy app (name-set); parent chart sourced from git with an oci:// dependency"
+  note: "dummy app (name-absent); parent chart sourced from git with an oci:// dependency"
